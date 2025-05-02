@@ -1,0 +1,222 @@
+/* Default website size */
+html {
+    font-size: 16px; /* Default font size */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Inherit box-sizing from html */
+}
+
+body {
+    max-width: 1200px; /* Maximum width for the website */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0 15px; /* Add padding for smaller screens */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: #007BFF;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+    color: white; /* Set text color to white */
+    text-decoration: none !important; /* Force removal of underline from text */
+}
+
+.header .logo {
+    color: var(--main-color);
+    font-size: 2.3rem;
+}
+
+.header .logo i {
+    padding-left: .5rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+.header .btn {
+    margin-top: 0;
+}
+
+#menu-btn {
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+/* Responsive adjustments */ 
+@media (max-width: 768px) {
+    .toolbars header h1 {
+        font-size: 1.8rem; /* Adjust font size for better readability */
+        text-align: center; /* Center align the header text */
+        margin: 10px 0; /* Add spacing around the header */
+    }
+
+    body {
+        padding: 0 10px; /* Adjust body padding for smaller screens */
+    }
+
+    .toolbars header h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .toolbars nav ul {
+        flex-direction: column 2; /* Stack navigation items vertically */
+        align-items: flex-start ; /* Align items to the left */
+    }
+
+    .toolbars nav ul li {
+        margin-top: 25px;
+        margin: 10px 0; /* Add spacing between vertical items */
+    }
+
+    .login-container {
+        width: 100%; /* Full width for smaller screens */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .toolbars {
+        padding: 8px 15px; /* Reduce padding for very small screens */
+    }
+
+    .toolbars header h1 {
+        font-size: 1.2rem; /* Further reduce font size */
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .login-container input,
+    .login-container button {
+        font-size: 0.9rem; /* Adjust input and button font size */
+    }
+}
+
+
+.toolbars {
+    background-color: #007BFF; /* Warna latar belakang biru */
+    color: white; /* Warna teks putih */
+    padding: 10px 20px; /* Padding di dalam elemen */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    position: fixed; /* Tetap di bagian atas saat di-scroll */
+    top: 0;
+    left: 0;
+    width: 100%; /* Lebar penuh */
+    z-index: 1000; /* Prioritas di atas elemen lain */
+    
+}
+
+.toolbars header h1 {
+    margin: 0;
+    font-size: 2rem; /* Ukuran font judul */
+    text-align: left; /* Teks rata kiri */
+}
+
+.toolbars nav ul {
+    list-style: none; /* Menghapus bullet pada daftar */
+    display: flex; /* Membuat daftar horizontal */
+    justify-content: right; /* Pusatkan elemen */
+    padding: 0;
+    margin: -10px 0 0 0;
+}
+
+.toolbars nav ul li {
+    margin: 0 15px; /* Jarak antar item */
+}
+
+.toolbars nav ul li a {
+    color: white; /* Warna teks tautan */
+    text-decoration: none; /* Menghapus garis bawah */
+    font-weight: bold; /* Teks tebal */
+}
+
+.toolbars nav ul li a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+.footer {
+    background-color: #007BFF; /* Warna latar belakang biru */
+    color: white; /* Warna teks putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 10px 20px; /* Padding di dalam elemen */
+    position: fixed; /* Tetap di bagian bawah saat di-scroll */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Lebar penuh */
+    z-index: 1000; /* Prioritas di atas elemen lain */
+}
+
+
+
+
+
+
+
+/* login body */
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .login-container .additional-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .login-container .additional-links a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .login-container .additional-links a:hover {
+            text-decoration: underline;
+        }
